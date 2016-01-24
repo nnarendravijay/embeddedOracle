@@ -45,6 +45,7 @@ public class EmbeddedOracle {
   private void startContainer(String oracleImage) throws InterruptedException,
       IOException {
 
+    @SuppressWarnings("unchecked")
     Optional<String> machineIp = (Optional<String>) DockerMachineManagement.getDefaultMachine();
     assert machineIp.isPresent();
     assert portBindings.containsKey(1521);
